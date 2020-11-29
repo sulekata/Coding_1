@@ -1,0 +1,340 @@
+---
+title: "Analysis of COVID-19 Data - Data Analysis 2 Assignment"
+author: "Kata Süle"
+date: "29th November 2020"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Introduction
+The aim of this cross-sectional analysis is to find out whether countries with higher numbers of confirmed COVID-19 cases also experience a higher number of deaths due to COVID-19. In order to investigate this issue I use data on the number of confirmed COVID-19 cases and deaths due to COVID-19 for 170 countries for 15th September 2020. Both variables are quantitative and are measured on a ratio scale. The corresponding population of the sample used in this analysis would be all the countries where there was at least one confirmed positive case, while the sample only contains a certain amount of these. Data quality issues can arise mainly regarding reliability and coverage since it is possible that not all the cases are reported in a country due to communication problems or there are deaths that are not attributed to COVID even though they should be. As for coverage the lack of testing could be a problem.
+
+```{r, include=FALSE}
+# initializing packages
+library( tidyverse )
+library( ggplot2 )
+require( scales )
+library( estimatr )
+library( lspline )
+library( kableExtra )
+library( texreg )
+
+
+# cleaning the memory
+rm( list=ls() )
+```
+
+```{r, include=FALSE}
+# importing the data
+my_path <- 'C:/CEU/Fall_Term/Github_Repos/Coding_1/Assignment_COVID/data/'
+df_full <- read_csv( paste0( my_path, '/clean/merged_covid_pop.csv'))
+```
+
+### Exploratory Data Analysis
+After creating the workfile I created histograms and summary statistics for both of my variables. Based on these there were four extreme values for the dependent variable - deaths - which belong to Mexico, India, Brazil and the United States. As for the explanatory variable - confirmed cases - there were three namely India, Brazil and the United States. Since these observations ensure higher variance in the variables and are unlikely to be errors I decided to keep them. However, because of the skewed distributions of both variables I used ln transformation, therefore I dropped countries that reported zero deaths. Furthermore, I scaled the confirmed cases variable by dividing it by 1000 to make it easier to interpret. 
+```{r, include=FALSE}
+# checking histograms
+# histogram for the dependent variable - number of registered deaths
+ggplot( data = df_full , aes( x = deaths ) ) +
+  geom_histogram( fill = 'dodgerblue3', bins = 25 ) +
+  labs( x='\n Number of registered deaths', y='Absolute Frequency \n',
+       title= 'Distribution of number of registered deaths by country') +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), 
+        plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+
+# there seem to be a few extreme values with more than 50,000 deaths
+# checking which countries these values belong to
+df_full %>% filter( deaths > 50000 ) %>% arrange( deaths )
+# the countries are: Mexico, India, Brazil and the United States
+
+# histogram for the explanatory variable - number of registered cases
+ggplot( data = df_full , aes( x = confirmed ) ) +
+  geom_histogram( fill = 'deeppink4', bins = 25 ) +
+  labs( x='\n Number of confirmed cases', y='Absolute Frequency \n',
+        title= 'Distribution of confirmed cases') +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), 
+         plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+
+# there seem to be a few extreme values with more than 2,000,000 confirmed cases
+# checking which countries these values belong to
+df_full %>% filter( confirmed > 2000000 ) %>% arrange( confirmed )
+# the countries are: India, Brazil and the United States
+
+# checking summary statistics
+# checking summary statistics for the dependent variable
+df_full %>% summarise(
+  variable = 'deaths',
+  n   = n(),
+  Mean     = mean( deaths ),
+  Median   = median( deaths ),
+  Min      = min( deaths ),
+  Max      = max( deaths ),
+  Std      = sd( deaths ) )
+
+# checking summary statistics for the explanatory variable
+df_full %>% summarise(
+  variable = 'confirmed',
+  n   = n(),
+  Mean     = mean( confirmed ),
+  Median   = median( confirmed ),
+  Min      = min( confirmed ),
+  Max      = max( confirmed ),
+  Std      = sd( confirmed ) )
+
+# scaling the explanatory variable
+df_full <- df_full %>% mutate( confirmed = confirmed/1000 )
+
+# dropping countries that reported 0 deaths because of the ln transformation and
+# creating the ln transformed variables for the analysis
+df <- df_full %>% 
+  filter( !( deaths == 0 ) ) %>% 
+  mutate( ln_deaths = log( deaths ),
+          ln_confirmed = log( confirmed ) )
+```
+
+The histograms show that the distributions of both variables are skewed with a long right tail. The summary statistics also show this feature with the means being much greater than the medians. The standard deviation of confirmed cases is large indicating big differences between countries. Therefore, as mentioned above I decided to use ln transformation for both variables. The substantitve reasons were that percentage changes would be straightforward to interpret and that the variables were likely to be affected in a multiplicative way, while the statistical ones were that the transformation made the relationship closer linear and that it made the modelling problem simpler as well.
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, out.width='50%'}
+# histograms
+# histogram for the explanatory variable - number of registered cases
+ggplot( data = df , aes( x = confirmed ) ) +
+  geom_histogram( fill = 'deeppink4', bins = 25 ) +
+  labs( x='\n Number of confirmed cases', y='Absolute Frequency \n',
+        title= 'Distribution of confirmed cases') +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), 
+         plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+
+# histogram for the dependent variable - number of registered deaths
+ggplot( data = df , aes( x = deaths ) ) +
+  geom_histogram( fill = 'dodgerblue3', bins = 25 ) +
+  labs( x='\n Number of registered deaths', y='Absolute Frequency \n',
+       title= 'Distribution of number of registered deaths by country') +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), 
+        plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# summary statistics for the explanatory variable
+confirmed_stat <- df %>% summarise(
+  variable = as.character('confirmed'),
+  n   = n(),
+  Mean     = mean( confirmed ),
+  Median   = median( confirmed ),
+  Min      = min( confirmed ),
+  Max      = max( confirmed ),
+  Std      = sd( confirmed ) )
+
+# summary statistics for the dependent variable
+deaths_stat <- df %>% summarise(
+  variable = as.character('deaths'),
+  n   = n(),
+  Mean     = mean( deaths ),
+  Median   = median( deaths ),
+  Min      = min( deaths ),
+  Max      = max( deaths ),
+  Std      = sd( deaths ) )
+
+table_summary <- add_row( confirmed_stat, deaths_stat )
+knitr::kable( table_summary, caption = "Summary statistics for number of confirmed cases and number of deaths" ) %>% kable_styling( position = "center", latex_options = 'hold_position' ) 
+```
+
+### Choice of Model
+
+After running four different models on the data (see Appendix) I opted for using a simple linear regression with the following formula:
+```{r, echo=FALSE}
+# running the chosen model
+linreg <- lm_robust( ln_deaths ~ ln_confirmed , data = df , se_type = "HC2" )
+
+# printing the formula
+print( 'ln_deaths = -4.32 + 1.04 * ln_confirmed' )
+```
+The alpha parameter of the regression shows the average value of the log of deaths when ln_confirmed equals 0 which means that the number of confirmed cases equals 1. This means that the average number of deaths is 0.013 when the number of confirmed cases equals 1. While according to the beta parameter when the number of confirmed cases is greater by 1% then the number of deaths is greater by 1.04% on average.
+
+### Hypothesis Testing
+
+When testing whether the beta parameter was equal to zero I got the following p-value:
+```{r, echo=FALSE, warning = FALSE, message = FALSE}
+# calculating the p-value
+summary <- summary( linreg )
+p <- summary$coefficients[ 2, 4 ]
+
+# saving the value into a data frame
+pv <- data.frame( measure = 'p-value', value = p )
+
+knitr::kable( pv, caption = "P-value (H0: beta = 0)" ) %>% kable_styling( position = "center", latex_options = 'hold_position' ) 
+```
+Since my chosen level of significance was 5% I could conclude that the beta parameter was significant since the p-value was very close to zero and smaller than the chosen level of significance.
+
+### Residual Analysis
+
+When analysing the residuals I could conclude that the top 5 countries which lost the most people due to COVID-19 are mainly middle-sized countries whereas the ones that lost the least amount of people due to COVID-19 are small states. This could be because making sure that all citizens follow the implemented measures is easier to check in smaller countries or because testing capacities are probably better in these states so as a result less people get infected so less people lose their lives.
+```{r, echo=FALSE, warning = FALSE, message = FALSE}
+# getting the predicted y values from the model
+df$linreg_y_pred <- linreg$fitted.values
+
+# calculating the errors of the model
+df$linreg_res <- df$ln_deaths - df$linreg_y_pred 
+
+# top 5 countries which lost the most people due to COVID-19
+large_pos <- df %>% top_n( 5 , linreg_res ) %>% 
+  select( country , ln_deaths , linreg_y_pred , linreg_res ) %>% arrange( linreg_res )
+
+# top 5 countries which lost the least people due to COVID-19
+large_neg <- df %>% top_n( -5 , linreg_res ) %>% 
+  select( country , ln_deaths , linreg_y_pred , linreg_res ) %>% arrange( linreg_res )
+
+summary <- large_pos
+summary <- rbind( summary, large_neg)
+
+knitr::kable( summary, caption = "Top countries with largest positive and largest  negative errors" ) %>% kable_styling( position = "center", latex_options = 'hold_position' )
+```
+
+### Summary
+
+In this analysis the aim was to model whether if a country has more confirmed COVID-19 cases it experiences a larger number of deaths as well. For the estimations I used data on confirmed cases and number of deaths for 170 countries for 15th September 2020. After transforming both variables with ln transformation and estimating four different models I chose a simple linear regression to model the pattern of association. The results showed that there is a positive, linear relationship between the number of confirmed cases and the number of deaths meaning that if a country has more confirmed cases then it has more deaths as well.
+
+### Appendix
+
+
+#### Checking Ln Transformations
+Based on the histograms and the summary statistics both the dependent and the
+explanatory variable showed a skewed distribution with a long right tail therefore ln transformation might be necessary. Therefore I checked scatter plots with lowess and different ln transformations. Based on which I decided to transform both of my variables.
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, out.width='50%'}
+# 1) scatter plot without ln transformation
+ggplot( df_full , aes( x = confirmed, y = deaths ) ) +
+  geom_point() +
+  geom_smooth( method="loess", colour = 'dodgerblue3' ) +
+  labs( x = "\n Number of confirmed cases", y = "Number of deaths \n", title = 'Without ln transformation') +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+
+# 2) scatter plot with ln transformation for the confirmed cases variable
+ggplot( df_full , aes( x = confirmed, y = deaths ) ) +
+  geom_point() +
+  geom_smooth( method="loess", colour = 'dodgerblue3' ) +
+  labs( x = "\n Number of confirmed cases (ln scale)", y = "Number of deaths \n", title = 'ln transformation for the confirmed cases variable' ) +
+  scale_x_continuous( trans = log_trans() ) +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, out.width='50%'}
+# 3) scatter plot with ln transformation for the deaths variable
+# the deaths variable contains observations for which the value equals 0
+# since 0 cannot be transformed with ln transformation these observations need to be
+# dropped first
+df_ln <- df %>% filter( !( deaths == 0 ) )
+
+ggplot( df_ln , aes( x = confirmed, y = deaths ) ) +
+  geom_point() +
+  geom_smooth( method="loess", colour = 'dodgerblue3' ) +
+  labs( x = "\n Number of confirmed cases", y = "Number of deaths (ln scale)\n", title = 'ln transformation for the deaths variable') +
+  scale_y_continuous( trans = log_trans() ) +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+
+# 4) scatter plot with ln transformation for both variables
+# here again the observations for which the value of the deaths variable equals 0
+# have to be dropped so I use the same data frame that I created for the third plot
+ggplot( df_ln , aes( x = confirmed, y = deaths ) ) +
+  geom_point() +
+  geom_smooth( method="loess", colour = 'dodgerblue3' ) +
+  labs( x = "\n Number of confirmed cases (ln scale)", y = "Number of deaths (ln scale)\n", title = 'ln transformation for both variables' ) +
+  scale_x_continuous( trans = log_trans() ) +
+  scale_y_continuous( trans = log_trans() ) +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+```
+
+
+#### Estimating Different Models
+In total I estimated four models which were the following: simple linear regression, quadratic regression, regression with piecewise linear spline and weighted linear regression where I used the total population of countries in 2019 as weights. The comparison of their features can be seen in the table below. While their scatter plots are included below the comparison table.
+
+```{r, include=FALSE}
+# estimating the models
+
+# 1) simple linear regression
+linreg <- lm_robust( ln_deaths ~ ln_confirmed , data = df , se_type = "HC2" )
+summary( linreg )
+
+# 2) quadratic regression
+# creating the square of the ln_confirmed variable
+df <- df %>% mutate( ln_confirmed_sq = ln_confirmed^2 )
+
+# running the model
+sqreg <- lm_robust( ln_deaths ~ ln_confirmed + ln_confirmed_sq , data = df )
+summary( sqreg )
+
+# 3) regression with piecewise linear spline
+# defining the cut-off values
+cutoff <- c( 0.6, 1700 ) 
+
+# taking the log of the cut-off values
+cutoff_ln <- log( cutoff )
+
+# running the model
+splinereg <- lm_robust( ln_deaths ~ lspline( ln_confirmed , cutoff_ln ), data = df )
+summary( splinereg )
+
+# 4) weighted linear regression
+weightreg <- lm_robust( ln_deaths ~ ln_confirmed , data = df , weights = population )
+summary( weightreg )
+```
+
+
+```{r, results = 'asis', echo = FALSE}
+# creating the comparison table
+texreg(list( linreg, sqreg, splinereg , weightreg ), table = FALSE, use.packages = FALSE, float.pos = 'h')
+```
+
+Based on the comparison table it can be concluded that the different models grasp the pattern of association between the variables almost equally well since the R^2 values are the same for the first three models and last one is also very close to these. As for the confidence intervals of the parameters only one - the beta parameter of the squared variable in the quadratic regression - contains zero which means that the rest of the coefficients are significantly different from zero. Another important finding is that all the coefficients are positive indicating a positive relationship between the variables which proves the intuition that if there are more confirmed cases in a country then there are probably more deaths as well. As for the piecewise linear splines regression we can see that the coefficients are not very different from each other indicating that the slope of the regression line does not have large breaks.
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, out.width='50%'}
+# plotting the first two models
+# simple linear regression plot
+ggplot( data = df, aes( x = ln_confirmed, y = ln_deaths ) ) + 
+  geom_point( color='deeppink4' ) +
+  geom_smooth( method = lm , color = 'dodgerblue3' ) +
+  theme_light() +
+  labs( title = 'Simple linear regression' ) +
+  theme( panel.grid.minor.x = element_blank(), plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+
+# quadratic regression plot
+ggplot( data = df, aes( x = ln_confirmed, y = ln_deaths ) ) + 
+  geom_point( color='deeppink4' ) +
+  geom_smooth( formula = y ~ poly( x,2 ) , method = lm , color = 'dodgerblue3' ) +
+  theme_light() +
+  labs( title = 'Quadratic regression' ) +
+  theme( panel.grid.minor.x = element_blank(), plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE, out.width='50%'}
+# plotting the last two models
+# piecewise linear spline plot
+ggplot( data = df, aes( x = ln_confirmed, y = ln_deaths ) ) + 
+  geom_point( color='deeppink4') +
+  geom_smooth( formula = y ~ lspline( x, cutoff_ln ) , method = lm , color = 'dodgerblue3' ) +
+  theme_light() +
+  labs( title = 'piecewise linear splines regression' ) +
+  theme( panel.grid.minor.x = element_blank(), plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+
+# weighted linear regression plot
+ggplot(data = df, aes( x = ln_confirmed, y = ln_deaths ) ) +
+  geom_point( data = df, aes( size = population ),  color = 'dodgerblue3', shape = 16, alpha = 0.6,  show.legend=F ) +
+  geom_smooth( aes( weight = population ), method = "lm", color='deeppink4' ) +
+  scale_size( range = c( 1, 10 ) ) +
+  labs( x = "ln(Number of confirmed cases)", y = "ln(Number of deaths)", title = 'Weighted linear regression' ) +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+```
+
+When looking at the scatter plots of the estimated models we can see that they capture the pattern of association well. The reason I chose the simple linear regression was that it is very straightforward to interpret and that it performed very well compared to the other models. Furthermore, the relationship between the dependent and the explanatory variable is more of a linear one therefore choosing the quadratic or the piecewise linear splines model would have added an unnecessary degree of complexity.

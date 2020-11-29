@@ -1,0 +1,1 @@
+This folder contains the raw and clean data files in the corresponding folders which were used for the analysis.
