@@ -1,0 +1,442 @@
+race,award,winner,movie,birthplace,sexual_orientation,years_since_award,age_at_award
+1,Best Director,Lewis Milestone,Two Arabian Knights,0,straight,93,32
+1,Best Director,Frank Lloyd,The Divine Lady,0,straight,90,35
+1,Best Director,Lewis Milestone,All Quiet on the Western Front,0,straight,89,36
+1,Best Director,Norman Taurog,Skippy,1,straight,88,33
+1,Best Director,Frank Borzage,Bad Girl,1,straight,87,39
+1,Best Director,Frank Lloyd,Cavalcade,0,straight,86,40
+1,Best Director,Frank Capra,It Happened One Night,0,straight,85,38
+1,Best Director,John Ford,The Informer,1,bisexual,84,39
+1,Best Director,Frank Capra,Mr. Deeds Goes to Town,0,straight,83,40
+1,Best Director,Leo McCarey,The Awful Truth,1,straight,82,41
+1,Best Director,Frank Capra,You Can't Take It with You,0,straight,81,42
+1,Best Director,Victor Fleming,Gone with the Wind,1,straight,80,57
+1,Best Director,John Ford,The Grapes of Wrath,1,bisexual,79,58
+1,Best Director,John Ford,How Green Was My Valley,1,bisexual,78,59
+1,Best Director,William Wyler,Mrs. Miniver,0,straight,77,60
+1,Best Director,Michael Curtiz,Casablanca,0,straight,76,58
+1,Best Director,Leo McCarey,Going My Way,1,straight,75,59
+1,Best Director,Jerome Robbins,West Side Story,1,homosexual,58,44
+1,Best Director,Billy Wilder,The Lost Weekend,0,straight,74,40
+1,Best Director,William Wyler,The Best Years of Our Lives,0,straight,73,41
+1,Best Director,Elia Kazan,Gentleman's Agreement,0,straight,72,42
+1,Best Director,John Huston,The Treasure of the Sierra Madre,1,straight,71,43
+1,Best Director,Joseph L. Mankiewicz,A Letter to Three Wives,1,straight,70,41
+1,Best Director,Joseph L. Mankiewicz,All About Eve,1,straight,69,42
+1,Best Director,George Stevens,A Place in the Sun,1,straight,68,48
+1,Best Director,John Ford,The Quiet Man,1,bisexual,67,49
+1,Best Director,Fred Zinnemann,From Here to Eternity,0,straight,66,47
+1,Best Director,Elia Kazan,On the Waterfront,0,straight,65,48
+1,Best Director,Delbert Mann,Marty,1,straight,64,36
+1,Best Director,George Stevens,Giant,1,straight,63,53
+1,Best Director,David Lean,The Bridge on the River Kwai,0,straight,62,50
+1,Best Director,Vincente Minnelli,Gigi,1,bisexual,61,56
+1,Best Director,William Wyler,Ben-Hur,0,straight,60,57
+1,Best Director,Billy Wilder,The Apartment,0,straight,59,55
+1,Best Director,Robert Wise,West Side Story,1,straight,59,47
+1,Best Director,David Lean,Lawrence of Arabia,0,straight,57,55
+1,Best Director,Tony Richardson,Tom Jones,0,bisexual,56,56
+1,Best Director,George Cukor,My Fair Lady,1,homosexual,55,57
+1,Best Director,Robert Wise,The Sound of Music,1,straight,54,52
+1,Best Director,Fred Zinnemann,A Man for All Seasons,0,straight,53,60
+1,Best Director,Mike Nichols,The Graduate,0,straight,52,61
+1,Best Director,Joel Coen,No Country for Old Men,1,straight,12,54
+1,Best Director,Carol Reed,Oliver!,0,straight,51,63
+1,Best Director,John Schlesinger,Midnight Cowboy,0,homosexual,51,43
+1,Best Director,Franklin J. Schaffner,Patton,0,straight,50,50
+1,Best Director,William Friedkin,The French Connection,1,straight,48,37
+1,Best Director,Bob Fosse,Cabaret,1,straight,47,46
+1,Best Director,George Roy Hill,The Sting,1,straight,47,52
+1,Best Director,Francis Ford Coppola,The Godfather Part II,1,straight,45,54
+1,Best Director,Milos Forman,One Flew over the Cuckoo's Nest,0,straight,44,44
+1,Best Director,John G. Avildsen,Rocky,1,straight,44,41
+1,Best Director,Woody Allen,Annie Hall,1,straight,42,43
+1,Best Director,Michael Cimino,The Deer Hunter,1,straight,41,44
+1,Best Director,Robert Benton,Kramer vs. Kramer,1,straight,40,48
+1,Best Director,Robert Redford,Ordinary People,1,straight,40,44
+1,Best Director,Warren Beatty,Reds,1,straight,39,44
+1,Best Director,Richard Attenborough,Gandhi,0,straight,38,59
+1,Best Director,James L. Brooks,Terms of Endearment,1,straight,37,60
+1,Best Director,Milos Forman,Amadeus,0,straight,35,53
+1,Best Director,Sydney Pollack,Out of Africa,1,straight,34,54
+1,Best Director,Oliver Stone,Platoon,1,straight,30,44
+1,Best Director,Bernardo Bertolucci,The Last Emperor,0,straight,32,47
+1,Best Director,Barry Levinson,Rain Man,1,straight,31,48
+1,Best Director,Oliver Stone,Born on the Fourth of July,1,straight,30,44
+1,Best Director,Kevin Costner,Dances with Wolves,1,straight,29,36
+1,Best Director,Jonathan Demme,The Silence of the Lambs,1,straight,28,48
+1,Best Director,Clint Eastwood,Unforgiven,1,straight,27,63
+1,Best Director,Steven Spielberg,Schindler's List,1,straight,26,48
+1,Best Director,Robert Zemeckis,Forrest Gump,1,straight,25,43
+1,Best Director,Mel Gibson,Braveheart,1,straight,24,44
+1,Best Director,Anthony Minghella,The English Patient,0,straight,23,45
+1,Best Director,James Cameron,Titanic,0,straight,22,44
+1,Best Director,Steven Spielberg,Saving Private Ryan,1,straight,21,53
+1,Best Director,Sam Mendes,American Beauty,0,straight,20,54
+1,Best Director,Steven Soderbergh,Traffic,1,straight,19,38
+1,Best Director,Ron Howard,A Beautiful Mind,1,straight,18,39
+1,Best Director,Roman Polanski,The Pianist,0,straight,17,70
+1,Best Director,Peter Jackson,The Lord of the Rings: Return of the King,0,straight,16,43
+1,Best Director,Clint Eastwood,Million Dollar Baby,1,straight,15,75
+0,Best Director,Ang Lee,Brokeback Mountain,0,straight,14,52
+1,Best Director,Martin Scorsese,The Departed,1,straight,13,65
+1,Best Director,Ethan Coen,No Country for Old Men,1,straight,12,51
+1,Best Director,Danny Boyle,Slumdog Millionaire,0,straight,11,53
+1,Best Director,Kathryn Bigelow,The Hurt Locker,1,straight,11,58
+1,Best Director,Tom Hooper,The King's Speech,0,na,9,39
+1,Best Director,Michel Hazanavicius,The Artist,0,straight,8,45
+0,Best Director,Ang Lee,Life of Pi,0,straight,7,59
+1,Best Actor,Emil Jannings,The Last Command,0,bisexual,91,45
+1,Best Actor,Warner Baxter,In Old Arizona,1,straight,90,41
+1,Best Actor,George Arliss,Desraeli,0,straight,90,62
+1,Best Actor,Lionel Barrymore,A Free Soul,1,straight,89,53
+1,Best Actor,Wallace Beery,The Champ,1,straight,88,54
+1,Best Actor,Charles Laughton,The Private Life of Henry VIII,0,homosexual,86,56
+1,Best Actor,Clark Gable,It Happened One Night,1,straight,85,57
+1,Best Actor,Victor McLaglen,The Informer,0,straight,84,53
+1,Best Actor,Paul Muni,The Story of Louis Pasteur,0,straight,83,42
+1,Best Actor,Spencer Tracy,Captains Courageous,1,straight,82,43
+1,Best Actor,Spencer Tracy,Boys Town,1,straight,81,44
+1,Best Actor,Robert Donat,Goodbye Mr. Chips,0,straight,80,35
+1,Best Actor,Jimmy Stewart,The Philadelphia Story,1,straight,79,33
+1,Best Actor,Gary Cooper,Sergeant York,1,straight,78,34
+1,Best Actor,James Cagney,Yankee Doodle Dandy,1,straight,77,44
+1,Best Actor,Paul Lukas,Watch on the Rhine,0,straight,76,57
+1,Best Actor,Bing Crosby,Going My Way,1,straight,75,58
+1,Best Actor,Ray Milland,The Lost Weekend,0,straight,74,59
+1,Best Actor,Fredric March,The Best Years of Our Lives,1,straight,73,50
+1,Best Actor,Ronald Colman,A Double Life,0,straight,72,51
+1,Best Actor,Laurence Olivier,Hamlet,0,bisexual,71,42
+1,Best Actor,Broderick Crawford,All The King's Men,1,straight,70,43
+0,Best Actor,Jose Ferrer,Cyrano de Bergerac,0,straight,69,44
+1,Best Actor,Humphrey Bogart,The Africa Queen,1,straight,68,53
+1,Best Actor,Gary Cooper,High Noon,1,straight,67,54
+1,Best Actor,William Holden,Stalag 17,1,straight,66,36
+1,Best Actor,Marlon Brando,On the Waterfront,1,bisexual,65,37
+1,Best Actor,Ernest Borgnine,Marty,1,straight,64,39
+1,Best Actor,Yul Brynner,The King and I,0,straight,63,37
+1,Best Actor,Alec Guinness,The Bridge on the River Kwai,0,bisexual,62,38
+1,Best Actor,David Niven,Separate Tables,0,straight,61,39
+1,Best Actor,Charlton Heston,Ben-hur,1,straight,60,40
+1,Best Actor,Burt Lancaster,Elmer Gantry,1,straight,59,41
+1,Best Actor,Maximilian Schell,Judgement at Nuremberg,0,straight,58,42
+1,Best Actor,Gregory Peck,To Kill a Mockingbird,1,straight,57,43
+0,Best Actor,Sidney Poitier,Lilies of the Field,1,straight,56,37
+1,Best Actor,Rex Harrison,My Fair Lady,0,straight,55,38
+1,Best Actor,Lee Marvin,Cat Ballou,1,straight,54,42
+1,Best Actor,Paul Scofield,A Man For All Seasons,0,straight,53,45
+1,Best Actor,Rod Steiger,In the Heat of the Night,1,straight,52,43
+1,Best Actor,Cliff Robertson,Charly,1,straight,51,44
+1,Best Actor,John Wayne,True Grit,1,straight,50,63
+1,Best Actor,George C. Scott,Patton,1,straight,49,44
+1,Best Actor,Gene Hackman,The French Connection,1,straight,48,42
+1,Best Actor,Marlon Brando,The Godfather,1,bisexual,47,43
+1,Best Actor,Jack Lemmon,Save the Tiger,1,straight,46,44
+1,Best Actor,Art Carney,Harry and Tonto,1,straight,45,45
+1,Best Actor,Jack Nicholson,One Flew Over the Cuckoo's Nest,1,straight,44,39
+1,Best Actor,Peter Finch,Network,0,straight,43,61
+1,Best Actor,Richard Dreyfuss,The Goodbye Girl,1,straight,42,31
+1,Best Actor,Jon Voight,Coming Home,1,straight,41,41
+1,Best Actor,Dustin Hoffman,Kramer vs. Kramer,1,straight,40,42
+1,Best Actor,Robert De Niro,Raging Bull,1,straight,39,38
+1,Best Actor,Henry Fonda,On Golden Pond,1,straight,38,77
+0,Best Actor,Ben Kingsley,Gandhi,0,straight,37,40
+1,Best Actor,Robert Duvall,Tender Mercies,1,straight,36,41
+0,Best Actor,F. Murray Abraham,Amadeus,1,straight,35,46
+1,Best Actor,William Hurt,Kiss of the Spider Woman,1,straight,34,36
+1,Best Actor,Paul Newman,The Color of Money,1,straight,33,62
+1,Best Actor,Michael Douglas,Wall Street,1,straight,32,44
+1,Best Actor,Dustin Hoffman,Rainman,1,straight,31,45
+1,Best Actor,Daniel Day-Lewis,My Left Foot,0,straight,30,33
+1,Best Actor,Jeremy Irons,Reversal of Fortune,0,straight,29,43
+1,Best Actor,Anthony Hopkins,Silence of the Lambs,0,straight,28,55
+1,Best Actor,Al Pacino,Scent of a Woman,0,straight,27,53
+1,Best Actor,Tom Hanks,Philadelphia,1,straight,26,54
+1,Best Actor,Tom Hanks,Forrest Gump,1,straight,25,55
+1,Best Actor,Nicolas Cage,Leaving Las Vegas,1,straight,24,56
+1,Best Actor,Geoffrey Rush,Shine,0,straight,23,57
+1,Best Actor,Jack Nicholson,As Good as It Gets,1,straight,23,60
+1,Best Actor,Roberto Benigni,Life is Beautiful,0,straight,21,47
+1,Best Actor,Kevin Spacey,American Beauty,1,na,20,41
+1,Best Actor,Russell Crowe,Gladiator,0,straight,19,42
+0,Best Actor,Denzel Washington,Training Day,1,straight,18,48
+1,Best Actor,Adrien Brody,The Pianist,1,straight,17,30
+1,Best Actor,Sean Penn,Mystic River,1,straight,17,43
+0,Best Actor,Jamie Foxx,Ray,1,straight,15,38
+1,Best Actor,Philip Seymour Hoffman,Capote,1,straight,14,39
+0,Best Actor,Forest Whitaker,The Last King of Scotland,1,straight,13,46
+1,Best Actor,Daniel Day-Lewis,There Will Be Blood,0,straight,12,51
+1,Best Actor,Sean Penn,Milk,1,straight,11,49
+1,Best Actor,Jeff Bridges,Crazy Heart,1,straight,10,50
+1,Best Actor,Colin Firth,The King's Speech,0,straight,9,51
+1,Best Actor,Jean Dujardin,The Artist,0,straight,8,40
+1,Best Actor,Daniel Day-Lewis,Lincoln,0,straight,7,56
+1,Best Actor,Matthew McConaughey,Dallas Buyers Club,1,straight,6,57
+1,Best Supporting Actor,Walter Brennan,Come and Get It,1,straight,82,44
+1,Best Supporting Actor,Joseph Schildkraut,The Life of Emile Zola,0,straight,82,42
+1,Best Supporting Actor,Walter Brennan,Kentucky,1,straight,81,45
+1,Best Supporting Actor,Thomas Mitchell,Stagecoach,1,straight,80,48
+1,Best Supporting Actor,Walter Brennan,The Westerner,1,straight,79,47
+1,Best Supporting Actor,Donald Crisp,How Green Was My Valley,0,straight,78,62
+1,Best Supporting Actor,Van Heflin,Johnny Eager,1,straight,77,33
+1,Best Supporting Actor,Charles Coburn,The More the Merrier,1,straight,76,67
+1,Best Supporting Actor,Barry Fitzgerald,Going My Way,0,na,75,57
+1,Best Supporting Actor,James Dunn,A Tree Grows in Brooklyn,1,straight,74,58
+1,Best Supporting Actor,Harold Russell,The Best Years of Our Lives,0,straight,73,33
+1,Best Supporting Actor,Edmund Gwenn,Miracle on 34th Street,0,na,72,73
+1,Best Supporting Actor,Walter Huston,The Treasure of the Sierra Madre,0,straight,71,74
+1,Best Supporting Actor,Dean Jagger,Twelve O'Clock High,1,straight,70,75
+1,Best Supporting Actor,George Sanders,All About Eve,0,straight,69,76
+1,Best Supporting Actor,Karl Malden,A Streetcar Named Desire,1,straight,68,40
+0,Best Supporting Actor,Anthony Quinn,Viva Zapata!,0,straight,67,38
+1,Best Supporting Actor,Frank Sinatra,From Here to Eternity,1,straight,66,39
+1,Best Supporting Actor,Edmond O'Brien,The Barefoot Contessa,1,straight,65,40
+1,Best Supporting Actor,Jack Lemmon,Mister Roberts,1,straight,64,41
+0,Best Supporting Actor,Anthony Quinn,Lust for Life,0,straight,63,42
+1,Best Supporting Actor,Red Buttons,Sayonara,1,straight,62,43
+1,Best Supporting Actor,Burl Ives,The Big Country,1,straight,61,50
+1,Best Supporting Actor,Hugh Griffith,Ben-Hur,0,na,60,48
+1,Best Supporting Actor,Peter Ustinov,Spartacus,0,straight,59,40
+1,Best Supporting Actor,George Chakiris,West Side Story,1,homosexual,58,28
+1,Best Supporting Actor,"Ed Begley, Sr.",Sweet Bird of Youth,1,straight,57,62
+1,Best Supporting Actor,Melvyn Douglas,Hud,1,straight,56,63
+1,Best Supporting Actor,Peter Ustinov,Topkapi,0,straight,55,44
+1,Best Supporting Actor,Martin Balsam,A Thousand Clowns,1,straight,54,45
+1,Best Supporting Actor,Walter Matthau,The Fortune Cookie,1,straight,53,46
+1,Best Supporting Actor,George Kennedy,Cool Hand Luke,1,straight,52,43
+1,Best Supporting Actor,Jack Albertson,The Subject Was Roses,1,na,51,62
+1,Best Supporting Actor,Gig Young,"They Shoot Horses, Don't They?",1,straight,50,63
+1,Best Supporting Actor,John Mills,Ryan's Daughter,0,straight,49,63
+1,Best Supporting Actor,Ben Johnson,The Last Picture Show,1,straight,48,54
+1,Best Supporting Actor,Joel Grey,Cabaret,1,homosexual,47,41
+1,Best Supporting Actor,John Houseman,The Paper Chase,0,straight,46,72
+1,Best Supporting Actor,Robert De Niro,The Godfather Part II,1,straight,45,32
+1,Best Supporting Actor,George Burns,The Sunshine Boys,1,straight,44,80
+1,Best Supporting Actor,Jason Robards,All the President's Men,1,straight,43,55
+1,Best Supporting Actor,Jason Robards,Julia,1,straight,42,56
+1,Best Supporting Actor,Christopher Walken,The Deer Hunter,1,straight,41,36
+1,Best Supporting Actor,Melvyn Douglas,Being There,1,straight,40,37
+1,Best Supporting Actor,Timothy Hutton,Oridnary People,1,straight,39,21
+1,Best Supporting Actor,John Gielgud,Arthur,0,homosexual,38,78
+0,Best Supporting Actor,"Lou Gossett, Jr.",An Officer and a Gentleman,1,straight,37,47
+1,Best Supporting Actor,Jack Nicholson,Terms of Endearment,1,straight,36,47
+0,Best Supporting Actor,Haing S. Ngor,The Killing Fields,0,straight,35,45
+1,Best Supporting Actor,Don Ameche,Cocoon,1,straight,34,82
+1,Best Supporting Actor,Michael Caine,Hannah and Her Sisters,0,straight,33,54
+1,Best Supporting Actor,Sean Connery,The Untouchables,0,straight,32,58
+1,Best Supporting Actor,Kevin Kline,A Fish Called Wanda,1,straight,31,42
+0,Best Supporting Actor,Denzel Washington,Glory,1,straight,30,36
+1,Best Supporting Actor,Joe Pesci,Good Fellas,1,straight,29,37
+1,Best Supporting Actor,Jack Palance,City Slickers,1,straight,28,73
+1,Best Supporting Actor,Gene Hackman,Unforgiven,1,straight,27,63
+1,Best Supporting Actor,Tommy Lee Jones,The Fugitive,1,straight,26,48
+1,Best Supporting Actor,Martin Landau,Ed Wood,1,straight,25,64
+1,Best Supporting Actor,Kevin Spacey,The Usual Suspects,1,na,24,37
+0,Best Supporting Actor,"Cuba Gooding, Jr.",Jerry Maguire,1,straight,23,38
+1,Best Supporting Actor,Robin Williams,Good Will Hunting,1,straight,22,47
+1,Best Supporting Actor,James Coburn,Affliction,1,straight,21,71
+1,Best Supporting Actor,Michael Caine,The Cider House Rules,0,straight,20,67
+0,Best Supporting Actor,Benicio Del Toro,Traffic,0,straight,19,34
+1,Best Supporting Actor,Jim Broadbent,Iris,0,straight,18,53
+1,Best Supporting Actor,Chris Cooper,Adaptation,1,straight,17,54
+1,Best Supporting Actor,Tim Robbins,Mystic River,1,straight,16,46
+0,Best Supporting Actor,Morgan Freeman,Million Dollar Baby,1,straight,15,47
+1,Best Supporting Actor,George Clooney,Syriana,1,straight,14,48
+1,Best Supporting Actor,Alan Arkin,Little Miss Sunshine,1,straight,13,73
+0,Best Supporting Actor,Javier Bardem,No Country for Old Men,0,straight,12,74
+1,Best Supporting Actor,Heath Ledger,The Dark Knight,0,straight,11,75
+1,Best Supporting Actor,Christoph Waltz,Inglourious Basterds,0,straight,10,76
+1,Best Supporting Actor,Christian Bale,The Fighter,0,straight,9,37
+1,Best Supporting Actor,Christopher Plummer,Beginning,0,straight,8,83
+1,Best Supporting Actor,Christoph Waltz,Django Unchained,0,straight,7,84
+1,Best Supporting Actor,Jared Leto,Dallas Buyers Club,1,straight,6,43
+1,Best Actress,Janet Gaynor,7th Heaven,1,straight,91,-42
+1,Best Actress,Mary Pickford,Coquette,0,straight,90,-41
+1,Best Actress,Norma Shearer,The Divorcee,0,straight,90,28
+1,Best Actress,Marie Dressler,Min and Bill,0,straight,89,29
+1,Best Actress,Helen Hayes,The Sin of Madelon Claudet,1,straight,88,32
+1,Best Actress,Katharine Hepburn,Morning Glory,1,bisexual,86,27
+1,Best Actress,Claudette Colbert,It Happened One Night,0,straight,85,32
+1,Best Actress,Bette Davis,Dangerous,1,straight,84,33
+1,Best Actress,Luise Rainer,The Great Ziegfeld,0,straight,83,27
+1,Best Actress,Luise Rainer,The Good Earth,0,straight,82,28
+1,Best Actress,Bette Davis,Jezebel,1,straight,81,29
+1,Best Actress,Vivien Leigh,Gone with the Wind,0,straight,80,30
+1,Best Actress,Ginger Rogers,Kitty Foyle,1,straight,79,30
+1,Best Actress,Joan Fontaine,Suspicion,0,straight,80,23
+1,Best Actress,Greer Garson,Mrs. Miniver,0,straight,78,38
+1,Best Actress,Jennifer Jones,The Song of Bernadette,1,straight,76,40
+1,Best Actress,Ingrid Bergman,Gaslight,0,straight,75,30
+1,Best Actress,Joan Crawford,Mildred Pierce,1,bisexual,74,41
+1,Best Actress,Olivia de Havilland,To Each His Own,0,straight,73,42
+1,Best Actress,Loretta Young,The Farmer's Daughter,1,straight,72,43
+1,Best Actress,Jane Wyman,Johnny Belinda,1,straight,71,44
+1,Best Actress,Olivia de Havilland,The Heiress,0,straight,70,45
+1,Best Actress,Judy Holliday,Born Yesterday,1,straight,69,30
+1,Best Actress,Vivien Leigh,A Streetcar Named Desire,0,straight,68,31
+1,Best Actress,Shirley Booth,"Come Back, Little Sheba",1,straight,67,55
+1,Best Actress,Audrey Hepburn,Roman Holiday,0,straight,66,56
+1,Best Actress,Grace Kelly,The Country Girl,1,straight,65,26
+1,Best Actress,Anna Magnani,The Rose Tattoo,0,straight,64,27
+1,Best Actress,Ingrid Bergman,Anastasia,0,straight,63,42
+1,Best Actress,Joanne Woodward,The Three Faces of Eve,1,straight,62,28
+1,Best Actress,Susan Hayward,I Want To Live!,1,straight,61,41
+1,Best Actress,Simone Signoret,Room at the Top,0,straight,60,39
+1,Best Actress,Elizabeth Taylor,Butterfield 8,0,straight,59,29
+1,Best Actress,Sophia Loren,Two Women,0,straight,58,28
+1,Best Actress,Anne Bancroft,The Miracle Worker,1,straight,57,32
+1,Best Actress,Patricia Neal,Hud,1,straight,56,38
+1,Best Actress,Julie Andrews,Mary Poppins,0,straight,55,39
+1,Best Actress,Julie Christie,Darling,0,straight,54,25
+1,Best Actress,Elizabeth Taylor,Who's Afraid of Virginia Woolf?,0,straight,53,35
+1,Best Actress,Katharine Hepburn,Guess Who's Coming to Dinner,1,bisexual,52,61
+1,Best Actress,Barbra Streisand,Funny Girl,1,straight,51,27
+1,Best Actress,Katharine Hepburn,The Lion in Winter,1,bisexual,51,62
+1,Best Actress,Maggie Smith,The Prime of Miss Jean Brodie,0,straight,50,36
+1,Best Actress,Glenda Jackson,Women in Love,0,straight,49,37
+1,Best Actress,Jane Fonda,Klute,1,straight,48,35
+1,Best Actress,Liza Minnelli,Cabaret,1,na,47,27
+1,Best Actress,Glenda Jackson,A Touch of Class,0,straight,46,28
+1,Best Actress,Ellen Burstyn,Alice Doesn't Live Here Anymore,1,straight,45,29
+1,Best Actress,Louise Fletcher,One Flew Over the Cuckoo's Nest,1,straight,44,42
+1,Best Actress,Faye Dunaway,Network,1,straight,43,36
+1,Best Actress,Diane Keaton,Annie Hall,1,straight,42,37
+1,Best Actress,Jane Fonda,Coming Home,1,straight,41,42
+1,Best Actress,Sally Field,Norma Rae,1,straight,40,43
+1,Best Actress,Sissy Spacek,Coal Miner's Daughter,1,straight,39,32
+1,Best Actress,Katharine Hepburn,On Golden Pond,1,bisexual,38,75
+1,Best Actress,Meryl Streep,Sophie's Choice,1,straight,37,34
+1,Best Actress,Shirley MacLaine,Terms of Endearment,1,straight,36,50
+1,Best Actress,Sally Field,Places in the Heart,1,straight,35,51
+1,Best Actress,Geraldine Page,The Trip to Bountiful,1,straight,34,62
+1,Best Actress,Marlee Matlin,Children of a Lesser God,1,straight,33,22
+1,Best Actress,Cher,Moonstruck,1,bisexual,32,42
+1,Best Actress,Jodie Foster,The Accused,1,homosexual,31,27
+1,Best Actress,Jessica Tandy,Driving Miss Daisy,0,straight,30,28
+1,Best Actress,Kathy Bates,Misery,1,straight,29,43
+1,Best Actress,Jodie Foster,The Silence of the Lambs,1,homosexual,28,30
+1,Best Actress,Emma Thompson,Howards End,0,straight,27,34
+1,Best Actress,Holly Hunter,The Piano,1,straight,26,36
+1,Best Actress,Jessica Lange,Blue Sky,1,straight,25,46
+1,Best Actress,Susan Sarandon,Dead Man Walking,1,straight,24,47
+1,Best Actress,Frances McDormand,Fargo,1,straight,23,40
+1,Best Actress,Helen Hunt,As Good As It Gets,1,straight,22,35
+1,Best Actress,Gwyneth Paltrow,Shakespeare in Love,1,straight,21,27
+1,Best Actress,Hilary Swank,Boys Don't Cry,1,straight,20,26
+1,Best Actress,Julia Roberts,Erin Brockovich,1,straight,19,34
+0,Best Actress,Halle Berry,Monster's Ball,1,straight,18,36
+1,Best Actress,Nicole Kidman,The Hours,1,straight,17,36
+1,Best Actress,Charlize Theron,Monster,0,straight,16,37
+1,Best Actress,Hilary Swank,Million Dollar Baby,1,straight,15,31
+1,Best Actress,Reese Witherspoon,Walk the Line,1,straight,14,30
+1,Best Actress,Helen Mirren,The Queen,0,straight,13,62
+1,Best Actress,Marion Cotillard,The Passionate Life of Edith Piaf,0,straight,12,33
+1,Best Actress,Kate Winslet,The Reader,0,straight,11,34
+1,Best Actress,Sandra Bullock,The Blind Side,1,straight,10,46
+1,Best Actress,Natalie Portman,Black Swan,0,straight,9,47
+1,Best Actress,Meryl Streep,The Iron Lady,1,straight,8,63
+1,Best Actress,Jennifer Lawrence,Silver Linings Playbook,1,na,7,23
+1,Best Actress,Cate Blanchett,Blue Jasmine,0,straight,6,45
+1,Best Supporting Actress,Gale Sondergaard,Anthony Adverse,1,straight,83,38
+1,Best Supporting Actress,Alice Brady,In Old Chicago,1,straight,82,39
+1,Best Supporting Actress,Fay Bainter,Jezebel,1,straight,81,40
+0,Best Supporting Actress,Hattie McDaniel,Gone with the Wind,1,na,80,47
+1,Best Supporting Actress,Jane Darwell,The Grapes of Wrath,1,straight,79,62
+1,Best Supporting Actress,Mary Astor,The Great Lie,1,straight,78,63
+1,Best Supporting Actress,Teresa Wright,Mrs. Miniver,1,straight,77,25
+1,Best Supporting Actress,Katina Paxinou,For Whom the Bell Tolls,0,straight,76,44
+1,Best Supporting Actress,Ethel Barrymore,None but the Lonely Heart,1,straight,75,66
+1,Best Supporting Actress,Anne Revere,National Velvet,1,straight,74,43
+1,Best Supporting Actress,Anne Baxter,The Razor's Edge,1,straight,73,44
+1,Best Supporting Actress,Celeste Holm,Gentleman's Agreement,1,straight,72,31
+1,Best Supporting Actress,Claire Trevor,Key Largo,1,straight,71,32
+1,Best Supporting Actress,Mercedes McCambridge,All the King's Men,1,straight,70,34
+1,Best Supporting Actress,Josephine Hull,Harvey,1,straight,69,35
+1,Best Supporting Actress,Kim Hunter,A Streetcar Named Desire,1,straight,68,30
+1,Best Supporting Actress,Gloria Grahame,The Bad and the Beautiful,1,straight,67,30
+1,Best Supporting Actress,Donna Reed,From Here to Eternity,1,straight,66,33
+1,Best Supporting Actress,Eva Marie Saint,On the Waterfront,1,straight,65,34
+1,Best Supporting Actress,Jo Van Fleet,East of Eden,1,straight,64,42
+1,Best Supporting Actress,Dorothy Malone,Written on the Wind,1,straight,63,32
+0,Best Supporting Actress,Miyoshi Umeki,Sayonara,0,straight,62,33
+1,Best Supporting Actress,Wendy Hiller,Separate Tables,0,straight,61,47
+1,Best Supporting Actress,Shelley Winters,The Diary of Anne Frank,1,straight,60,40
+1,Best Supporting Actress,Shirley Jones,Elmer Gantry,1,straight,59,27
+0,Best Supporting Actress,Rita Moreno,West Side Story,0,straight,58,31
+1,Best Supporting Actress,Patty Duke,The Miracle Worker,1,straight,57,17
+1,Best Supporting Actress,Margaret Rutherford,the V.I.P.s,0,straight,56,72
+1,Best Supporting Actress,Lila Kedrova,Zorba the Greek,0,straight,55,73
+1,Best Supporting Actress,Shelley Winters,A Patch of Blue,1,straight,54,46
+1,Best Supporting Actress,Sandy Dennis,Who's Afraid of Virginia Woolf?,1,bisexual,53,30
+1,Best Supporting Actress,Estelle Parsons,Bonnie and Clyde,1,straight,52,41
+1,Best Supporting Actress,Ruth Gordon,Rosemary's Baby,1,straight,51,73
+1,Best Supporting Actress,Goldie Hawn,Cactus Flower,1,straight,50,25
+1,Best Supporting Actress,Helen Hayes,Airport,1,straight,49,71
+1,Best Supporting Actress,Cloris Leachman,The Last Picture Show,1,straight,48,46
+1,Best Supporting Actress,Eileen Heckart,Butterflies Are Free,1,straight,47,54
+1,Best Supporting Actress,Tatum O'Neal,Paper Moon,1,straight,46,55
+1,Best Supporting Actress,Ingrid Bergman,Murder on the Orient Express,0,straight,45,60
+1,Best Supporting Actress,Lee Grant,Shampoo,1,straight,44,49
+1,Best Supporting Actress,Beatrice Straight,Network,1,straight,43,50
+1,Best Supporting Actress,Vanessa Redgrave,Julia,0,straight,42,41
+1,Best Supporting Actress,Maggie Smith,California Suite,0,straight,41,45
+1,Best Supporting Actress,Meryl Streep,Kramer vs. Kramer,1,straight,40,31
+1,Best Supporting Actress,Mary Steenburgen,Melvin and Howard,1,straight,39,32
+1,Best Supporting Actress,Maureen Stapleton,Reds,1,straight,38,57
+1,Best Supporting Actress,Jessica Lange,Tootsie,1,straight,37,34
+1,Best Supporting Actress,Linda Hunt,The Year of Living Dangerously,1,na,36,35
+1,Best Supporting Actress,Peggy Ashcroft,A Passage to India,0,straight,35,78
+1,Best Supporting Actress,Anjelica Huston,Prizzi's Honor,1,straight,34,79
+1,Best Supporting Actress,Dianne Wiest,Hannah and Her Sisters,1,straight,33,39
+1,Best Supporting Actress,Olympia Dukakis,Moonstruck,1,straight,32,57
+1,Best Supporting Actress,Geena Davis,The Accidental Tourist,1,straight,31,33
+1,Best Supporting Actress,Brenda Fricker,My Left Foot,0,straight,30,45
+0,Best Supporting Actress,Whoopi Goldberg,Ghost,1,straight,29,36
+0,Best Supporting Actress,Mercedes Ruehl,The Fisher King,1,straight,28,44
+1,Best Supporting Actress,Marisa Tomei,My Cousin Vinny,1,straight,27,45
+1,Best Supporting Actress,Anna Paquin,The Piano,0,bisexual,26,12
+1,Best Supporting Actress,Dianne Wiest,Bullets Over Broadway,1,straight,25,47
+1,Best Supporting Actress,Mira Sorvino,Mighty Aphrodite,1,straight,24,29
+1,Best Supporting Actress,Juliette Binoche,The English Patient,0,straight,23,30
+1,Best Supporting Actress,Kim Basinger,L.A. Confidential,1,straight,22,31
+1,Best Supporting Actress,Judi Dench,Shakespeare in Love,0,straight,21,32
+1,Best Supporting Actress,Angelina Jolie,"Girl, Interrupted",1,bisexual,20,33
+1,Best Supporting Actress,Marcia Gay Harden,Pollock,1,straight,19,42
+1,Best Supporting Actress,Jennifer Connelly,A Beautiful Mind,1,straight,18,32
+1,Best Supporting Actress,Catherine Zeta-Jones,Chicago,0,straight,17,34
+1,Best Supporting Actress,Ren̩e Zellweger,Cold Mountain,1,straight,16,35
+1,Best Supporting Actress,Cate Blanchett,The Aviator,0,straight,15,36
+1,Best Supporting Actress,Rachel Weisz,The Constant Gardener,0,straight,14,37
+0,Best Supporting Actress,Jennifer Hudson,Dreamgirls,1,straight,13,26
+1,Best Supporting Actress,Tilda Swinton,Michael Clayton,0,straight,13,26
+0,Best Supporting Actress,Penelope Cruz,Vicky Cristina Barcelona,0,straight,11,35
+0,Best Supporting Actress,Mo'Nique,Precious,1,straight,10,43
+1,Best Supporting Actress,Melissa Leo,The Fighter,1,straight,9,51
+0,Best Supporting Actress,Octavia Spencer,The Help,1,na,8,40
+1,Best Supporting Actress,Anne Hathaway,Les Mis̩rables,1,straight,7,31
+0,Best Supporting Actress,Lupita Nyong'o,12 Years a Slave,0,na,6,32
+1,Best Director,Billy Wilder,The Apartment,0,straight,59,55
+1,Best Actress,Ginger Rogers,Kitty Foyle,1,straight,79,30
+1,Best Actor,Tom Hanks,Philadelphia,1,straight,26,83
+1,Best Director,Michael Cimino,The Deer Hunter,1,straight,41,68
+1,Best Supporting Actress,Mary Astor,The Great Lie,1,straight,78,31
+1,Best Supporting Actress,Angelina Jolie,"Girl, Interrupted",1,bisexual,20,89
+1,Best Supporting Actress,Lee Grant,Shampoo,1,straight,44,49
+1,Best Supporting Actress,Anne Revere,National Velvet,1,straight,74,43
+1,Best Actress,Faye Dunaway,Network,1,straight,43,36
+1,Best Supporting Actor,Van Heflin,Johnny Eager,1,straight,77,33
+1,Best Actress,Joanne Woodward,The Three Faces of Eve,1,straight,62,28
+1,Best Actor,Gary Cooper,High Noon,1,straight,67,23
+1,Best Actress,Elizabeth Taylor,Who's Afraid of Virginia Woolf?,0,straight,53,35
+1,Best Actress,Hilary Swank,Million Dollar Baby,1,straight,15,31
+1,Best Actress,Hilary Swank,Million Dollar Baby,1,straight,15,31
+1,Best Actress,Gwyneth Paltrow,Shakespeare in Love,1,straight,21,27
+1,Best Supporting Actor,Jack Albertson,The Subject Was Roses,1,na,51,62
+0,Best Supporting Actress,Mo'Nique,Precious,1,straight,10,43
+1,Best Supporting Actress,Marcia Gay Harden,Pollock,1,straight,19,42
+1,Best Actress,Maggie Smith,The Prime of Miss Jean Brodie,0,straight,50,36
+1,Best Supporting Actress,Rachel Weisz,The Constant Gardener,0,straight,14,72
+1,Best Director,Danny Boyle,Slumdog Millionaire,0,straight,11,53
+1,Best Supporting Actor,Jason Robards,All the President's Men,1,straight,43,55
+1,Best Supporting Actor,James Coburn,Affliction,1,straight,21,71
+1,Best Director,John Huston,The Treasure of the Sierra Madre,1,straight,71,21

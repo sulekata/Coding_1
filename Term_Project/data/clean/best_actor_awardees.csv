@@ -1,0 +1,89 @@
+race,award,winner,movie,birthplace,sexual_orientation,years_since_award,age_at_award
+1,Best Actor,Emil Jannings,The Last Command,0,bisexual,91,45
+1,Best Actor,Warner Baxter,In Old Arizona,1,straight,90,41
+1,Best Actor,George Arliss,Desraeli,0,straight,90,62
+1,Best Actor,Lionel Barrymore,A Free Soul,1,straight,89,53
+1,Best Actor,Wallace Beery,The Champ,1,straight,88,54
+1,Best Actor,Charles Laughton,The Private Life of Henry VIII,0,homosexual,86,56
+1,Best Actor,Clark Gable,It Happened One Night,1,straight,85,57
+1,Best Actor,Victor McLaglen,The Informer,0,straight,84,53
+1,Best Actor,Paul Muni,The Story of Louis Pasteur,0,straight,83,42
+1,Best Actor,Spencer Tracy,Captains Courageous,1,straight,82,43
+1,Best Actor,Spencer Tracy,Boys Town,1,straight,81,44
+1,Best Actor,Robert Donat,Goodbye Mr. Chips,0,straight,80,35
+1,Best Actor,Jimmy Stewart,The Philadelphia Story,1,straight,79,33
+1,Best Actor,Gary Cooper,Sergeant York,1,straight,78,34
+1,Best Actor,James Cagney,Yankee Doodle Dandy,1,straight,77,44
+1,Best Actor,Paul Lukas,Watch on the Rhine,0,straight,76,57
+1,Best Actor,Bing Crosby,Going My Way,1,straight,75,58
+1,Best Actor,Ray Milland,The Lost Weekend,0,straight,74,59
+1,Best Actor,Fredric March,The Best Years of Our Lives,1,straight,73,50
+1,Best Actor,Ronald Colman,A Double Life,0,straight,72,51
+1,Best Actor,Laurence Olivier,Hamlet,0,bisexual,71,42
+1,Best Actor,Broderick Crawford,All The King's Men,1,straight,70,43
+0,Best Actor,Jose Ferrer,Cyrano de Bergerac,0,straight,69,44
+1,Best Actor,Humphrey Bogart,The Africa Queen,1,straight,68,53
+1,Best Actor,Gary Cooper,High Noon,1,straight,67,54
+1,Best Actor,William Holden,Stalag 17,1,straight,66,36
+1,Best Actor,Marlon Brando,On the Waterfront,1,bisexual,65,37
+1,Best Actor,Ernest Borgnine,Marty,1,straight,64,39
+1,Best Actor,Yul Brynner,The King and I,0,straight,63,37
+1,Best Actor,Alec Guinness,The Bridge on the River Kwai,0,bisexual,62,38
+1,Best Actor,David Niven,Separate Tables,0,straight,61,39
+1,Best Actor,Charlton Heston,Ben-hur,1,straight,60,40
+1,Best Actor,Burt Lancaster,Elmer Gantry,1,straight,59,41
+1,Best Actor,Maximilian Schell,Judgement at Nuremberg,0,straight,58,42
+1,Best Actor,Gregory Peck,To Kill a Mockingbird,1,straight,57,43
+0,Best Actor,Sidney Poitier,Lilies of the Field,1,straight,56,37
+1,Best Actor,Rex Harrison,My Fair Lady,0,straight,55,38
+1,Best Actor,Lee Marvin,Cat Ballou,1,straight,54,42
+1,Best Actor,Paul Scofield,A Man For All Seasons,0,straight,53,45
+1,Best Actor,Rod Steiger,In the Heat of the Night,1,straight,52,43
+1,Best Actor,Cliff Robertson,Charly,1,straight,51,44
+1,Best Actor,John Wayne,True Grit,1,straight,50,63
+1,Best Actor,George C. Scott,Patton,1,straight,49,44
+1,Best Actor,Gene Hackman,The French Connection,1,straight,48,42
+1,Best Actor,Marlon Brando,The Godfather,1,bisexual,47,43
+1,Best Actor,Jack Lemmon,Save the Tiger,1,straight,46,44
+1,Best Actor,Art Carney,Harry and Tonto,1,straight,45,45
+1,Best Actor,Jack Nicholson,One Flew Over the Cuckoo's Nest,1,straight,44,39
+1,Best Actor,Peter Finch,Network,0,straight,43,61
+1,Best Actor,Richard Dreyfuss,The Goodbye Girl,1,straight,42,31
+1,Best Actor,Jon Voight,Coming Home,1,straight,41,41
+1,Best Actor,Dustin Hoffman,Kramer vs. Kramer,1,straight,40,42
+1,Best Actor,Robert De Niro,Raging Bull,1,straight,39,38
+1,Best Actor,Henry Fonda,On Golden Pond,1,straight,38,77
+0,Best Actor,Ben Kingsley,Gandhi,0,straight,37,40
+1,Best Actor,Robert Duvall,Tender Mercies,1,straight,36,41
+0,Best Actor,F. Murray Abraham,Amadeus,1,straight,35,46
+1,Best Actor,William Hurt,Kiss of the Spider Woman,1,straight,34,36
+1,Best Actor,Paul Newman,The Color of Money,1,straight,33,62
+1,Best Actor,Michael Douglas,Wall Street,1,straight,32,44
+1,Best Actor,Dustin Hoffman,Rainman,1,straight,31,45
+1,Best Actor,Daniel Day-Lewis,My Left Foot,0,straight,30,33
+1,Best Actor,Jeremy Irons,Reversal of Fortune,0,straight,29,43
+1,Best Actor,Anthony Hopkins,Silence of the Lambs,0,straight,28,55
+1,Best Actor,Al Pacino,Scent of a Woman,0,straight,27,53
+1,Best Actor,Tom Hanks,Philadelphia,1,straight,26,54
+1,Best Actor,Tom Hanks,Forrest Gump,1,straight,25,55
+1,Best Actor,Nicolas Cage,Leaving Las Vegas,1,straight,24,56
+1,Best Actor,Geoffrey Rush,Shine,0,straight,23,57
+1,Best Actor,Jack Nicholson,As Good as It Gets,1,straight,23,60
+1,Best Actor,Roberto Benigni,Life is Beautiful,0,straight,21,47
+1,Best Actor,Kevin Spacey,American Beauty,1,na,20,41
+1,Best Actor,Russell Crowe,Gladiator,0,straight,19,42
+0,Best Actor,Denzel Washington,Training Day,1,straight,18,48
+1,Best Actor,Adrien Brody,The Pianist,1,straight,17,30
+1,Best Actor,Sean Penn,Mystic River,1,straight,17,43
+0,Best Actor,Jamie Foxx,Ray,1,straight,15,38
+1,Best Actor,Philip Seymour Hoffman,Capote,1,straight,14,39
+0,Best Actor,Forest Whitaker,The Last King of Scotland,1,straight,13,46
+1,Best Actor,Daniel Day-Lewis,There Will Be Blood,0,straight,12,51
+1,Best Actor,Sean Penn,Milk,1,straight,11,49
+1,Best Actor,Jeff Bridges,Crazy Heart,1,straight,10,50
+1,Best Actor,Colin Firth,The King's Speech,0,straight,9,51
+1,Best Actor,Jean Dujardin,The Artist,0,straight,8,40
+1,Best Actor,Daniel Day-Lewis,Lincoln,0,straight,7,56
+1,Best Actor,Matthew McConaughey,Dallas Buyers Club,1,straight,6,57
+1,Best Actor,Tom Hanks,Philadelphia,1,straight,26,83
+1,Best Actor,Gary Cooper,High Noon,1,straight,67,23
