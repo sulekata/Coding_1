@@ -9,7 +9,7 @@ library( tidyverse )
 
 # Import data -------------------------------------------------------------
 
-github_url <- 'https://raw.githubusercontent.com/sulekata/Coding_1/master/Term_Project/data/raw/best_actor_winners_source.csv'
+github_url <- 'https://raw.githubusercontent.com/sulekata/Coding_1/master/Term_Project/data/raw/awardees_source.csv'
 df <- read_csv( github_url )
 
 # Filter and transform needed variables -------------------------------------------------
@@ -120,6 +120,9 @@ write_csv( df, paste0( my_path, 'data/clean/all_awardees.csv' ) )
 
 # filter award variable to keep Best Actor category only
 df <- df %>% filter( award == 'Best Actor' )
+
+# drop award variable
+df <- df %>% select( !( award ) )
 
 # save filtered clean data as well
 write_csv( df, paste0( my_path, 'data/clean/best_actor_awardees.csv' ) )
