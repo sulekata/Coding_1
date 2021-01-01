@@ -26,7 +26,7 @@ df <- df %>% transmute( race = race_ethnicity,
 
 # create new quantitative variable years_since_award
 # which measures the years that have elapsed since the year of the award
-df <- df %>% mutate( years_since_award = 2020 - year_award )
+df <- df %>% mutate( years_since_award = as.numeric( year( today() ) ) - year_award )
 
 # create new quantitative variable age_at_award
 # which measures the awardees' age when they received the award
