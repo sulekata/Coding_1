@@ -1,5 +1,6 @@
 ---
-title: "Final Term Project"
+title: "Title of my amazing analysis"
+subtitle: "Final Term Project - Data Analysis 2"
 author: "Kata Süle"
 date: '3rd January 2021'
 output: html_document
@@ -10,6 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r, include=FALSE}
+# clean environment
+rm( list=ls() )
+
 # initialize packages
 library( tidyverse )
 library( fastDummies )
@@ -20,9 +24,40 @@ library( fastDummies )
 github_url <- 'https://raw.githubusercontent.com/sulekata/Coding_1/master/Term_Project/data/clean/best_actor_awardees.csv'
 
 df <- read_csv( github_url )
-
-s <- df %>% group_by( sex)
 ```
 
-# create dummy variables for sexual orientation
-df <- dummy_cols( df, select_columns = c( 'sexual_orientation' ) )
+## Executive summary/abstract
+
+## Introduction
+
+## Data
+```{r}
+# check distribution of variables
+
+# distribution of dependent variable - race
+ggplot( data = df, aes( x = race ) ) +
+  geom_histogram( fill = 'dodgerblue3', bins = 2 ) +
+  labs( x='\n Number of registered deaths', y='Absolute Frequency \n',
+       title= 'Distribution of number of registered deaths by country') +
+  theme_light() +
+  theme( panel.grid.minor.x = element_blank(), 
+        plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) )
+
+ggplot( data = df, aes( x = race, fill = race ) )  +
+  geom_bar( ) +
+  labs( x = '\n Race of Awardees', y = 'Number of Awardees \n',
+        title = 'Distribution of Best Actor Awardees by Race (1929-2014)') +
+  scale_fill_manual( values = c( '#c7006b', 'dodgerblue3' ), name = 'Race' ) +
+  theme( panel.grid.minor.x = element_blank(), 
+         plot.title = element_text( size = 12, face = "bold", hjust = 0.5 ) ) +
+  scale_x_discrete( breaks = 1:2, labels = c( 'White', 'Not White' ) )
+```
+
+
+## Model
+
+## Generalization, external validity and causality
+
+## Summary
+
+## Appendix

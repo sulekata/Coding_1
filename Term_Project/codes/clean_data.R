@@ -57,8 +57,8 @@ df <- df %>% mutate( age_at_award = year_award - as.numeric( col ) )
 df <- df %>% select( !c( date_of_birth, year_award ) )
 
 # transform race variable
-# white = 1, otherwise 0
-df <- df %>% mutate( race = ifelse( race == 'White', 1, 0 ) )
+# if white then white, otherwise not white
+df <- df %>% mutate( race = ifelse( race == 'White', 'white', 'not white' ) )
 
 # inspect religion variable
 religions <- df %>% group_by( religion ) %>% summarize( n = n() )
@@ -67,7 +67,7 @@ religions <- df %>% group_by( religion ) %>% summarize( n = n() )
 df <- df %>% select( !religion )
 
 # transform birthplace variable
-# US = 1, otherwise 0
+# if USA then usa, otherwise not usa
 # US cities have the two letter abbreviation of the states after them
 # only exception is New York City which does not have the state code
 # I use this to categorize the birthplaces
@@ -81,13 +81,13 @@ place <- NULL
 
 for ( i in df$birthplace ){
   if ( i == 'New York City' ){
-    z <- 1
+    z <- 'usa'
   } else if ( i == 'Na' ){
-    z <- 0
+    z <- 'not usa'
   } else if ( length( strsplit( strsplit( i, ', ' )[[1]][-1], "" )[[1]] ) == 2 ){
-    z <- 1
+    z <- 'usa'
   } else {
-    z <-0
+    z <- 'not usa'
   }
   place <- c( place, z )
 }
