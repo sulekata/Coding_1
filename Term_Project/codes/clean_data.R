@@ -24,6 +24,9 @@ df <- df %>% transmute( race = race_ethnicity,
                   sexual_orientation = sexual_orientation,
                   year_award = year_of_award )
 
+# drop duplicates
+df <- df %>% unique()
+
 # create new quantitative variable years_since_award
 # which measures the years that have elapsed since the year of the award
 df <- df %>% mutate( years_since_award = as.numeric( year( today() ) ) - year_award )
@@ -38,11 +41,10 @@ col <- NULL
 for ( i in df$date_of_birth ){
   if ( length( strsplit( i, "" )[[1]] ) == 11 ){
     t <- strsplit( i, '-')[[1]][3]
-  } else if ( length( strsplit( i, "" )[[1]] ) == 9 ){
+  } else if ( length( strsplit( i, "" )[[1]] ) == 8 | length( strsplit( i, "" )[[1]] ) == 9 ){
     t <- strsplit( i, '-')[[1]][3]
     t <- paste0( '19', t )
-  }
-    else if ( length( strsplit( i, "" )[[1]] ) == 4 ){
+  } else if ( length( strsplit( i, "" )[[1]] ) == 4 ){
     t <- i
   } else if ( length( strsplit( i, "" )[[1]] ) > 11 ){
     t <- substr( i, 8, 11 )
@@ -123,6 +125,21 @@ df <- df %>% filter( award == 'Best Actor' )
 
 # drop award variable
 df <- df %>% select( !( award ) )
+
+# check duplicates in the years_since_award variable
+years <- df %>% group_by( years_since_award ) %>% summarise( n = n() )
+
+# there are 3 duplicates so I correct these by hand to not lose data
+# get the years that appear more than once
+years <- years %>% filter( n > 1 )
+years <- years[ , 1 ]
+
+# get the actors who belong to these years
+years_dupl <- df %>% filter( years_since_award == years[[ 1, 1 ]] | years_since_award == years[[ 2, 1 ]] | years_since_award == years[[ 3, 1 ]] )
+
+# modify two values that are errors
+df <- df %>% mutate( years_since_award = ifelse( winner == 'Sean Penn' & years_since_award == 18, 17, years_since_award ),
+                     years_since_award = ifelse( winner == 'Jack Nicholson' & years_since_award == 24, 23, years_since_award ) )
 
 # save filtered clean data as well
 write_csv( df, paste0( my_path, 'data/clean/best_actor_awardees.csv' ) )
