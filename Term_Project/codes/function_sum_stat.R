@@ -13,13 +13,6 @@
 #     if true, it gives the number of missing observations and the number of used observations
 #     to calculate the statistics
 
-##
-# TASK: ADD THE FOLLOWING STATISTICS AS WELL:
-#
-#     Support: min, max
-#     Dispersion: sd, var, range (max-min), iqr (inter-quartile range - 3rd quartile - 1st quartile)
-#      
-#
 # Output:
 # Tibble: in columns the variables
 #         in rows the requested summary statistics (1st column contains the statistic's name)
@@ -94,4 +87,3 @@ sum_stat <- function( df , var_names , stats , num_obs = TRUE ){
     relocate( statistics )
   return( sum_stat )
 }
-a <- sum_stat( df, c( 'score4', 'score8' ), c( 'mean', 'median', '1st_qu' ) )
