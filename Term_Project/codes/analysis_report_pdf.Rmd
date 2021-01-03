@@ -4,7 +4,7 @@ subtitle: "Final Term Project - Data Analysis 2"
 author: "Kata Süle"
 date: '3rd January 2021'
 abstract: 'The aim of this analysis is to find out whether Best Actor Awardees at the Academy Awards are more likely to be white than of other colours. To investigate this question I use a data set on Best Actor Awardees between 1929 and 2014 with race being the dependent variable and explanatory variables such as place of birth, sexual orientation, elapsed years since the award ceremony and age at award ceremony. By using these variables I estimate several probability models including linear probability models, a logit model and a probit model and come to the conclusion that neither of the models have significant parameters therefore they are not suitable for prediction purposes. Lastly, I check if my results have external validity for which I use samples of the Best Supporting Actor, Best Actress and Best Director categories and find that none of the parameters are significant in any of the models. Therefore I conclude that the insignificant results are probably not due to the small sample size but to inadequate explanatory variables.'
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
@@ -282,6 +282,8 @@ ggplot( data = df, aes( x = age_at_award ) ) +
 
 Besides the plots I also checked the descriptive statistics of the variables which can be seen in the table below. The means of the *race*, *birthplace* and *sexual orientation* variables show that the majority of actors are white, were born in the US and straight. We can see that the first award was given out 92 years ago and that actors are usually between their late thirties and early fifties when receiving the award.
 
+\newpage
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 #### summary statistics table
 
@@ -358,7 +360,7 @@ According to the log likelihood value the logit model was slightly better than t
 \begin{equation}
 \begin{split}
 y^p & = \Lambda( \beta_0 + \beta_1birthplace_i + \beta_2sexual.orientation_i + \beta_3years.since.award_i + \beta_4age.at.award(<47)_i + \\
-& \beta_5age.at.award(> 47)_i + \beta_6birthplace*years.since.award_i )
+& \beta_5age.at.award(> 47)_i + \beta_6birthplace*years.since.award_i ) \nonumber 
 \end{split}
 \end{equation}
 
@@ -465,6 +467,8 @@ ggplot( calibration_d,aes(x = mean_actual, y = mean_predicted)) +
 
 Since it could have happened that I did not add some important variables that could have made the parameter estimates better I decided to do a robustness check for the logit model. To do this I estimated two additional logit models: one without the interaction variable and one with two knots for the *age at award* variable which was supported by the lowess graph between the *race* and the *age at award* variables. The comparison table of these two models and the original logit model can be seen below. Since all of the parameters are non-significant for the new models as well I concluded that the model is robust.
 
+\newpage
+
 ```{r, include=FALSE}
 #### robustness check with the logit model
 # run logit model with two knots for the age at award variable
@@ -504,7 +508,7 @@ msummary( models,
           gof_omit = 'DF|Deviance|F|R2 Adj.|AIC',
           stars = c('*' = .05, '**' = .01),
           coef_rename = coef_names,
-          output = "html",
+          output = "latex",
           title = 'Robustness check with two additional logit models'
 )
 ```
@@ -563,6 +567,8 @@ logit_actress <- glm( model_formula , data = df_actress, family = binomial( link
 logit_dir <- glm( model_formula , data = df_dir, family = binomial( link = "logit" ) )
 ```
 
+\newpage
+
 ```{r, results = 'asis', echo = FALSE, message=FALSE, warning=FALSE}
 #### create comparison table with original logit model included as well
 # create list of pretty model names
@@ -590,7 +596,7 @@ msummary( models,
           gof_omit = 'DF|Deviance|F|R2 Adj.|AIC|Log.Lik.',
           stars = c('*' = .05, '**' = .01),
           coef_rename = coef_names,
-          output = "html",
+          output = "latex",
           title = 'External validity check on three new samples'
 )
 ```
@@ -600,6 +606,8 @@ Based on the comparison table we can see that the coefficient estimates are simi
 ## Summary
 
 In this analysis I investigated whether Best Actor Awardees at the Academy Awards are more likely to be white with the help of probability models. I estimated linear probability models, a logit and a probit model with race being the dependent variable and four explanatory variables. Based on the results I had to conclude that none of the parameters of my models were significant therefore they are not suitable for prediction purposes. Furthermore, by checking the external validity of the model I saw that the insignificant results were probably caused by inadequate variables and not small sample size. Which means that the place of birth, the sexual orientation, the elapsed years since receiving the award and the age at award are not suitable to predict the race of an awardee.
+
+\newpage
 
 ## Appendix
 
@@ -640,8 +648,8 @@ The model comparison table below shows the coefficients and the marginal effects
 # create comparison table for lpm, logit and probit models with marginal effects
 # create list of pretty model names
 models <- list()
-models[[ "LPM with PLS" ]] <- lpm2
-models[[ "LPM with PLS and Int." ]] <- lpm3
+models[[ "LPM + PLS" ]] <- lpm2
+models[[ "LPM + PLS + Int." ]] <- lpm3
 models[[ "Logit" ]] <- logit
 models[[ "Logit Mfx" ]] <- logit_marg
 models[[ "Probit" ]] <- probit
@@ -661,17 +669,19 @@ coef_names <- c( '(Intercept)' = 'Constant',
 glance_custom.glm <- function(x) data.frame(`Pseudo R2` = pR2(x)["McFadden"])
 ```
 
-```{r, results = 'asis', echo = FALSE, message=FALSE, warning=FALSE, collapse = TRUE}
+```{r, results = 'asis', echo = FALSE, message=FALSE, warning=FALSE, fig.align="center"}
 # create table
 msummary( models,
           fmt="%.2f",
           gof_omit = 'DF|Deviance|F|R2 Adj.|AIC',
           stars = c('*' = .05, '**' = .01),
           coef_rename = coef_names,
-          output = "html",
+          output = "latex",
           title = 'Results of estimated models'
 )
 ```
+
+\newpage
 
 #### Predicted probabilities
 
@@ -722,8 +732,10 @@ b10 <- b10 %>% rename( Statistics = statistics,
                       `Age At Award` = age_at_award ) 
 
 # print table
-knitr::kable( b10, caption = "Characteristics of bottom 10% (Logit)", digits = 2 ) %>% kable_styling( position = "center", latex_options = 'hold_position' )
+knitr::kable( b10, caption = "Characteristics of bottom 10% (Logit)", digits = 2, format = "latex" ) %>% kable_styling( position = "center", latex_options = 'hold_position' )
+```
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # top 10%
 t10 <- sum_stat( subset( df, q100_pred_logit == 10 ),
                 c( 'birthplace_b', 'sexual_or_b', 'years_since_award', 'age_at_award' ),
@@ -779,7 +791,9 @@ cond_white <- cond_white %>% rename( Statistics = statistics,
 
 # print table
 knitr::kable( cond_white, caption = "Summary statistics of predicted probabilities if race is white", digits = 2 ) %>% kable_styling( position = "center", latex_options = 'hold_position' )
+```
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # if race is not white
 cond_not_white <- sum_stat( subset( df, race_b == 0 ), c("pred_lpm3", "pred_logit", "pred_probit"), 
           c( "mean","median","min","max","sd" ),
@@ -792,5 +806,6 @@ cond_not_white <- cond_not_white %>% rename( Statistics = statistics,
                        Probit = pred_probit ) 
 
 # print table
-knitr::kable( cond_not_white, caption = "Summary statistics of predicted probabilities if race is not white", digits = 2 ) %>% kable_styling( position = "center", latex_options = 'hold_position' )
+knitr::kable( cond_not_white, caption = "Summary statistics of predicted probabilities if race is not white", digits = 2 ) %>% kable_styling( position = "center" )
 ```
+
