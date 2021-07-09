@@ -1,1 +1,2 @@
-This repository (link: https://github.com/sulekata/Coding_1/tree/master/Assignment_COVID) contains Kata Süle's solution for Assignment 1 for the Data Analysis 2 course. The aim of this cross-sectional analysis is to find out whether countries with higher numbers of confirmed COVID-19 cases also experience a higher number of deaths due to COVID-19.
+# Overview
+The aim of this cross-sectional analysis was to find out whether countries with higher numbers of confirmed COVID-19 cases also experienced a higher number of deaths due to COVID-19.
