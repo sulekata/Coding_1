@@ -1,2 +1,2 @@
 ## Overview
-This [repository](https://github.com/sulekata/Coding_1/tree/master/Term_Project) contains Kata Süle's solution for the Final Term Project of the Data Analysis 2 course. The aim of this analysis is to find out whether Best Actor Awardees at the Academy Awards are more likely to be white than of other colours. The sample used for the analysis consists of Best Actor Awardees between 1929 and 2014.
+The aim of this analysis was to find out whether Best Actor Awardees at the Academy Awards were more likely to be white than of other races. The sample used for the analysis consisted of Best Actor Awardees between 1929 and 2014.
